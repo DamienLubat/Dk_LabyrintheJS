@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dk.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="stage1">
+    <!--Mur-->
+    <!--Fond-->
+    <img id="fond"   src="./img/fond.jpg" style=" background-color: #ffffff;  width: 500px; height: 500px; margin-left: 325px; margin-top: 0px; position:absolute; z-index:1;">
+        
+    <!--Depart-->
+    <img src="./img/depart.png" id="depart"   style="   width: 50px; height: 50px; margin-left: 325px; margin-top: 0px; position: absolute; z-index:1;">
+    
+    <!--Dk-->
+    <img src="./img/dk_droite.png" id="dk"   style="   width: 50px; height: 50px; margin-left: 325px; margin-top: 0px; position: absolute; z-index:2; transition: margin 0.5s;">
+    <!--<img type="hidden" id="dk" style="   width: 50px; height: 50px; margin-left: 325px; margin-top: 0px; position: absolute; z-index:0;">
+    -->
+    <!--Mur-->
+    <!--Margin-Top: 0-->
+    <img src="./img/mur.png" id="mur0"   style="   width: 50px; height: 50px; margin-left: 425px; margin-top: 0px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur1" style="   width: 50px; height: 50px; margin-left: 625px; margin-top: 0px; position: absolute; z-index:2;">
+
+    <!--Margin-Top: 50-->
+    <img src="./img/mur.png" id="mur2"   style="   width: 50px; height: 50px; margin-left: 325px; margin-top: 50px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur3"   style="   width: 50px; height: 50px; margin-left: 525px; margin-top: 50px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur4"   style="   width: 50px; height: 50px; margin-left: 625px; margin-top: 50px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur5"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 50px; position: absolute; z-index:2;">
+    
+    <!--Margin-Top: 100-->
+    <img src="./img/mur.png" id="mur6"   style="   width: 50px; height: 50px; margin-left: 325px; margin-top: 100px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur7"   style="   width: 50px; height: 50px; margin-left: 375px; margin-top: 100px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur8"   style="   width: 50px; height: 50px; margin-left: 425px; margin-top: 100px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur9"   style="   width: 50px; height: 50px; margin-left: 475px; margin-top: 100px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur10"   style="   width: 50px; height: 50px; margin-left: 525px; margin-top: 100px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur11"   style="   width: 50px; height: 50px; margin-left: 625px; margin-top: 100px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur12"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 100px; position: absolute; z-index:2;">
+
+    <!--Margin-Top: 150-->
+    <img src="./img/mur.png" id="mur13"   style="   width: 50px; height: 50px; margin-left: 625px; margin-top: 150px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur14"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 150px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur15"   style="   width: 50px; height: 50px; margin-left: 325px; margin-top: 150px; position: absolute; z-index:2;">
+
+    <!--Margin-Top: 200-->
+    <img src="./img/mur.png" id="mur16"   style="   width: 50px; height: 50px; margin-left: 625px; margin-top: 200px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur17"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 200px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur18"   style="   width: 50px; height: 50px; margin-left: 775px; margin-top: 200px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur19"   style="   width: 50px; height: 50px; margin-left: 525px; margin-top: 200px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur20"   style="   width: 50px; height: 50px; margin-left: 475px; margin-top: 200px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur21"   style="   width: 50px; height: 50px; margin-left: 425px; margin-top: 200px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur22"   style="   width: 50px; height: 50px; margin-left: 525px; margin-top: 200px; position: absolute; z-index:2;">
+    
+    <!--Margin-Top: 250-->
+    <img src="./img/mur.png" id="mur23"   style="   width: 50px; height: 50px; margin-left: 375px; margin-top: 250px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur24"   style="   width: 50px; height: 50px; margin-left: 425px; margin-top: 250px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur25"   style="   width: 50px; height: 50px; margin-left: 475px; margin-top: 250px; position: absolute; z-index:2;">
+    
+    <!--Margin-Top: 300-->
+    <img src="./img/mur.png" id="mur26"   style="   width: 50px; height: 50px; margin-left: 425px; margin-top: 300px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur27"   style="   width: 50px; height: 50px; margin-left: 375px; margin-top: 300px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur28"   style="   width: 50px; height: 50px; margin-left: 575px; margin-top: 300px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur29"   style="   width: 50px; height: 50px; margin-left: 675px; margin-top: 300px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur30"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 300px; position: absolute; z-index:2;">
+    
+    <!--Margin-Top: 350-->
+    <img src="./img/mur.png" id="mur31"   style="   width: 50px; height: 50px; margin-left: 525px; margin-top: 350px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur32"   style="   width: 50px; height: 50px; margin-left: 575px; margin-top: 350px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur33"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 350px; position: absolute; z-index:2;">
+    
+    <!--Margin-Top: 400-->
+    <img src="./img/mur.png" id="mur34"   style="   width: 50px; height: 50px; margin-left: 375px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur35"   style="   width: 50px; height: 50px; margin-left: 425px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur36"   style="   width: 50px; height: 50px; margin-left: 575px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur37"   style="   width: 50px; height: 50px; margin-left: 525px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur38"   style="   width: 50px; height: 50px; margin-left: 625px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur39"   style="   width: 50px; height: 50px; margin-left: 675px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur40"   style="   width: 50px; height: 50px; margin-left: 725px; margin-top: 400px; position: absolute; z-index:2;">
+    <img src="./img/mur.png" id="mur41"   style="   width: 50px; height: 50px; margin-left: 775px; margin-top: 400px; position: absolute; z-index:2;">
+
+    <!--Margin-Top: 450-->      
+    <img src="./img/mur.png" id="mur42"   style="   width: 50px; height: 50px; margin-left: 375px; margin-top: 450px; position: absolute; z-index:2;">
+
+    <!--Arriver-->
+    <img src="./img/arrivee.png" id="fin"   style="   width: 50px; height: 50px; margin-left: 775px; margin-top: 450px; position: absolute; z-index:2;">
+
+
+    <!--Fin-->
+    <img src="./img/fin_dk.png" id="finAffichage" style="width: 600px; height: 600px; margin-left: 325px; margin-top: 0px; position: absolute; z-index:0; display:none;">
+    <!--<audio src="./img/Final.wav" id="sonFin" style="display:none" controls autoplay loop ></audio>-->
+
+</div>
+</body>
+</html>
+
+<script>
+    //direction possible du perso
+    var murAll;
+
+    //capteur des evenements
+    document.addEventListener('keydown', function (event) {
+        var e = window.event;
+        //document.getElementById('0').
+        //text
+        console.log(event.code);
+        //int
+        console.log(e.keyCode);
+        console.log(e.keyCode);
+        //action de l'utilisateur
+        if (e.keyCode == '38') {
+            // up arrow
+            let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
+            let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
+            let marginTopFond = parseInt(document.getElementById('fond').style.marginTop.replace('px', ''), 10);
+            let clientHeightFond = parseInt(document.getElementById('fond').clientHeight, 10);
+
+            var direction = true;
+            var index;
+
+            if (posDKtop > marginTopFond && clientHeightFond + marginTopFond > posDKtop) {
+                for (let i = 0; i <= 42; i++) {
+
+                    if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop - 50 + 'px') {
+                        index = i;
+                        direction = false;
+
+                        //querySelectorAll
+
+                        break;
+                    }
+                }
+
+                if (direction == true) {
+
+                    posDKtop = posDKtop - 50;
+
+                    //afficher
+                    document.getElementById('dk').src = "./img/dk_haut.png"
+                    document.getElementById('dk').style.marginTop = posDKtop + "px";
+                    document.getElementById('dk').style.marginLeft = posDKleft + "px";
+
+                    //hidden
+                    //document.getElementById('dk').style.marginTop = posDKtop + "px";
+                }
+            }
+        }
+        else if (e.keyCode == '40') {
+            // down arrow
+            let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
+            let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
+            let widthDK = parseInt(document.getElementById('dk').style.width.replace('px', ''), 10);
+            let marginTopFond = parseInt(document.getElementById('fond').style.marginTop.replace('px', ''), 10);
+            let clientHeightFond = parseInt(document.getElementById('fond').clientHeight, 10);
+
+            var direction = true;
+            var index;
+
+            if (posDKtop >= marginTopFond && clientHeightFond + marginTopFond - widthDK > posDKtop) {
+                for (let i = 0; i <= 42; i++) {
+
+                    if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop + 50 + 'px') {
+                        index = i;
+                        direction = false;
+
+                        //querySelectorAll
+
+                        break;
+                    }
+                }
+
+                if (direction == true) {
+
+                    posDKtop = posDKtop + 50;
+
+                    //afficher
+                    document.getElementById('dk').src = "./img/dk_bas.png"
+                    document.getElementById('dk').style.marginTop = posDKtop + "px";
+                    document.getElementById('dk').style.marginLeft = posDKleft + "px";
+
+                    //hidden
+                    //document.getElementById('dk').style.marginTop = posDKtop + "px";
+                }
+            }
+        }
+        else if (e.keyCode == '37') {
+            // left arrow
+            let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
+            let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
+            let marginLeftFond = parseInt(document.getElementById('fond').style.marginLeft.replace('px', ''), 10);
+            let clientWidthFond = parseInt(document.getElementById('fond').clientWidth, 10);
+
+            var direction = true;
+            var index;
+
+            if (posDKleft > marginLeftFond && clientWidthFond + marginLeftFond >= posDKleft) {
+                for (let i = 0; i <= 42; i++) {
+
+                    if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft - 50 + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop + 'px') {
+                        index = i;
+                        direction = false
+
+                        //querySelectorAll
+
+                        break;
+                    }
+                }
+                if (direction == true) {
+                    //deplacement
+                    posDKleft = posDKleft - 50;
+
+                    //afficher
+                    document.getElementById('dk').src = "./img/dk_gauche.png"
+                    document.getElementById('dk').style.marginLeft = posDKleft + "px";
+                    document.getElementById('dk').style.marginTop = posDKtop + "px";
+
+
+                    //hidden
+                    //document.getElementById('dk').style.marginLeft = posDKleft + "px";
+                }
+            }
+        }
+
+        else if (e.keyCode == '39') {
+            // right arrow
+            let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
+            let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
+            let widthDK = parseInt(document.getElementById('dk').style.width.replace('px', ''), 10);
+            let marginLeftFond = parseInt(document.getElementById('fond').style.marginLeft.replace('px', ''), 10);
+            let clientWidthFond = parseInt(document.getElementById('fond').clientWidth, 10);
+
+            var direction = true;
+            var index;
+
+            if (posDKleft >= marginLeftFond && clientWidthFond + marginLeftFond - widthDK > posDKleft) {
+                for (let i = 0; i <= 42; i++) {
+
+
+                    if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 50 + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop + 'px') {
+                        index = i;
+                        direction = false
+
+                        //querySelectorAll
+
+                        break;
+                    }
+                }
+
+                if (direction == true) {
+                    //deplacement
+                    posDKleft = posDKleft + 50;
+
+                    //afficher
+                    document.getElementById('dk').src = "./img/dk_droite.png"
+                    document.getElementById('dk').style.marginLeft = posDKleft + "px";
+                    document.getElementById('dk').style.marginTop = posDKtop + "px";
+
+                    //hidden
+                    //document.getElementById('dk').style.marginLeft = posDKleft + "px";
+
+                    //Animation fin
+                    if (document.getElementById('fin').style.marginLeft == posDKleft + 'px' && document.getElementById('fin').style.marginTop == posDKtop + 'px') {
+                        document.getElementById('finAffichage').style.display = "";
+                        document.getElementById('finAffichage').style.zIndex = 4;
+                        const fin = document.getElementsByClassName('stage1')[0];
+                        //fin.remove();
+
+                        
+
+                        /*document.getElementById('sonFin').play();
+                        setTimeout(document.getElementById('sonFin').pause(), 4000);*/
+
+                    }
+                }
+            }
+        }
+
+        else if (e.keyCode == '112') {
+            document.getElementById('fondStart').style.zIndex = 0;
+        }
+
+        else if (e.keyCode == '13') {
+            location.href = "index.html"
+        }
+    })
+</script>

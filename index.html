@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./img/Final.wav" rel="AUDIO">
+    <link rel="stylesheet" href="./css/grid.css" type="text/css">
+    <!--<link rel="alternate" href="./mur.html">-->
+    <title>Game DK</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="one">
+            <!--Acceuil-->
+            <img id="fondStart" src="./img/accueil.png">
+    
+    
+            <!--Fin-->
+            <img src="./img/fin_dk.png" id="finAffichage"
+                style="width: 600px; height: 600px; margin-left: 325px; margin-top: 0px; position: absolute; display:none;">
+            <!--<audio src="./img/Final.wav" id="sonFin" style="display:none" controls autoplay loop ></audio>-->
+        </div>
+        <div class="two">
+            <p style="background: #000000fb; color: white; padding: 3%;">
+                Ce jeux est simple.
+                Il vaut touver le chemin vers la sortie.
+                Pour cela, vous utiliseraiz les commandes flecher pour vous diriger.
+                Bonne Game!
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    //a supprimer pour la luiditer
+    try {
+        //direction possible du perso
+        var murAll;
+
+
+        //capteur des evenements
+        document.addEventListener('keydown', function (event) {
+            var e = window.event;
+            //document.getElementById('0').
+            //text
+            console.log(event.code);
+            //int
+            console.log(e.keyCode);
+            console.log(e.keyCode);
+            //action de l'utilisateur
+
+
+            if (e.keyCode == '112') {
+                //document.getElementById('fondStart').style.zIndex = 0;
+                (function playGame() {
+                    window.location.href = "Etape1.html"
+                }())
+            }
+            if (e.keyCode == '113') {
+                //document.getElementById('fondStart').style.zIndex = 0;
+                (function playGame() {
+                    window.location.href = "Etape1.html"
+                }())
+            }
+            else if (e.keyCode == '13') {
+                document.getElementById('finAffichage').style.display = "on";
+                document.getElementById('fondStart').style.zIndex = 0;
+            }
+        })
+    }
+    catch (e) {
+        console.log(e)
+    }
+
+//si on tap le mur on pert de la vie
+//graphisme dk
+//tuto
+//menu
+//??saut de la graviter
+</script>
