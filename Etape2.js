@@ -4,12 +4,13 @@ var murAll;
 //capteur des evenements
 document.addEventListener('keydown', function (event) {
     var e = window.event;
-    //document.getElementById('0').
+
     //text
     console.log(event.code);
     //int
     console.log(e.keyCode);
     console.log(e.keyCode);
+
     //action de l'utilisateur
     if (e.keyCode == '38') {
         // up arrow
@@ -21,14 +22,13 @@ document.addEventListener('keydown', function (event) {
         var direction = true;
         var index;
 
+        //check mur
         if (posDKtop > marginTopFond && clientHeightFond + marginTopFond > posDKtop) {
             for (let i = 0; i <= 42; i++) {
 
                 if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop - 50 + 'px') {
                     index = i;
                     direction = false;
-
-                    //querySelectorAll
 
                     break;
                 }
@@ -59,14 +59,13 @@ document.addEventListener('keydown', function (event) {
         var direction = true;
         var index;
 
+        //check mur
         if (posDKtop >= marginTopFond && clientHeightFond + marginTopFond - widthDK > posDKtop) {
             for (let i = 0; i <= 42; i++) {
 
                 if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop + 50 + 'px') {
                     index = i;
                     direction = false;
-
-                    //querySelectorAll
 
                     break;
                 }
@@ -96,14 +95,13 @@ document.addEventListener('keydown', function (event) {
         var direction = true;
         var index;
 
+        //check mur
         if (posDKleft > marginLeftFond && clientWidthFond + marginLeftFond >= posDKleft) {
             for (let i = 0; i <= 42; i++) {
 
                 if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft - 50 + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop + 'px') {
                     index = i;
                     direction = false
-
-                    //querySelectorAll
 
                     break;
                 }
@@ -135,6 +133,7 @@ document.addEventListener('keydown', function (event) {
         var direction = true;
         var index;
 
+        //check mur
         if (posDKleft >= marginLeftFond && clientWidthFond + marginLeftFond - widthDK > posDKleft) {
             for (let i = 0; i <= 42; i++) {
 
@@ -142,8 +141,6 @@ document.addEventListener('keydown', function (event) {
                 if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 50 + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop + 'px') {
                     index = i;
                     direction = false
-
-                    //querySelectorAll
 
                     break;
                 }
