@@ -165,6 +165,7 @@ document.addEventListener('keydown', function (event) {
                     
                     document.getElementById('finAffichage').style.display = "";
                     document.getElementById('finAffichage').style.zIndex = 4;
+                    document.getElementById('finMessage').style.display = "";
                     fin = document.getElementsByClassName('stage1')[0];
                     //fin.remove();
 
