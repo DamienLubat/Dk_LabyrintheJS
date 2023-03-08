@@ -1,3 +1,11 @@
+var start = true;
+
+(async function(){
+    while(true){
+        let depArrow = await deplacementArrow();
+    }
+})();
+
 run()
 async function run() {
     //direction possible du perso
@@ -13,7 +21,6 @@ async function run() {
         console.log(e.keyCode);
         console.log(e.keyCode);
         
-        let depArrow = await deplacementArrow();
         
         
         //action de l'utilisateur
@@ -23,31 +30,36 @@ async function run() {
             let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
             let marginTopFond = parseInt(document.getElementById('fond').style.marginTop.replace('px', ''), 10);
             let clientHeightFond = parseInt(document.getElementById('fond').clientHeight, 10);
+            var posARROWtop = parseInt(250);
+            var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
 
             var direction = true;
             var index;
 
+            
             if (posDKtop > marginTopFond && clientHeightFond + marginTopFond > posDKtop) {
                 for (let i = 0; i <= 42; i++) {
-
+                    
                     if (document.getElementById('mur' + i + '').style.marginLeft == posDKleft + 'px' && document.getElementById('mur' + i + '').style.marginTop == posDKtop - 50 + 'px') {
                         index = i;
                         direction = false;
-
+                        
                         //querySelectorAll
-
+                        
                         break;
                     }
                 }
-
+                
                 if (direction == true) {
-
+                    
                     posDKtop = posDKtop - 50;
-
+                    
                     //afficher
                     document.getElementById('dk').src = "./img/dk_haut.png"
                     document.getElementById('dk').style.marginTop = posDKtop + "px";
                     document.getElementById('dk').style.marginLeft = posDKleft + "px";
+                    
+                    Dead(posDKleft, posARROWleft, posDKtop, posARROWtop)
 
                     //hidden
                     //document.getElementById('dk').style.marginTop = posDKtop + "px";
@@ -61,6 +73,8 @@ async function run() {
             let widthDK = parseInt(document.getElementById('dk').style.width.replace('px', ''), 10);
             let marginTopFond = parseInt(document.getElementById('fond').style.marginTop.replace('px', ''), 10);
             let clientHeightFond = parseInt(document.getElementById('fond').clientHeight, 10);
+            var posARROWtop = parseInt(250);
+            var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
 
             var direction = true;
             var index;
@@ -86,7 +100,7 @@ async function run() {
                     document.getElementById('dk').src = "./img/dk_bas.png"
                     document.getElementById('dk').style.marginTop = posDKtop + "px";
                     document.getElementById('dk').style.marginLeft = posDKleft + "px";
-
+                    Dead(posDKleft, posARROWleft, posDKtop, posARROWtop)
                     //hidden
                     //document.getElementById('dk').style.marginTop = posDKtop + "px";
                 }
@@ -99,6 +113,8 @@ async function run() {
             let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
             let marginLeftFond = parseInt(document.getElementById('fond').style.marginLeft.replace('px', ''), 10);
             let clientWidthFond = parseInt(document.getElementById('fond').clientWidth, 10);
+            var posARROWtop = parseInt(250);
+            var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
 
             var direction = true;
             var index;
@@ -124,7 +140,7 @@ async function run() {
                     document.getElementById('dk').style.marginLeft = posDKleft + "px";
                     document.getElementById('dk').style.marginTop = posDKtop + "px";
 
-
+                    Dead(posDKleft, posARROWleft, posDKtop, posARROWtop)
                     //hidden
                     //document.getElementById('dk').style.marginLeft = posDKleft + "px";
                 }
@@ -139,6 +155,8 @@ async function run() {
             let widthDK = parseInt(document.getElementById('dk').style.width.replace('px', ''), 10);
             let marginLeftFond = parseInt(document.getElementById('fond').style.marginLeft.replace('px', ''), 10);
             let clientWidthFond = parseInt(document.getElementById('fond').clientWidth, 10);
+            var posARROWtop = parseInt(250);
+            var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
 
             var direction = true;
             var index;
@@ -177,6 +195,8 @@ async function run() {
                         
                         document.getElementById('finAffichage').style.display = "";
                         document.getElementById('finAffichage').style.zIndex = 4;
+
+                        Dead(posDKleft, posARROWleft, posDKtop, posARROWtop)
                         fin = document.getElementsByClassName('stage1')[0];
                         //fin.remove();
 
@@ -201,32 +221,32 @@ async function run() {
     })
 
 }; 
- function deplacementArrow() {
-    var posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
-    var posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
-    var posARROWtop = 250;
-    var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
-    var marginLeftFond = 475;
-    var afin = false;
-    
-    //for(var p = 775; p>475; p=p-50){
-        do {
-          document.getElementById("arrow").style.zIndex = 4;
 
-          posARROWleft = posARROWleft - 50;
-          document.getElementById("arrow").style.marginLeft = posARROWleft + "px";
-          return new Promise((resolve) => setTimeout(resolve, 2000)); // attendre 2 secondes avant de continuer
-          if (posARROWleft == 475) {
-            afin = true;
-          } else {
-            afin = false;
-          }
-        } while (afin == true);
-  
-    document.getElementById('arrow').style.zIndex = 0;
-    document.getElementById('arrow').style.marginLeft = '775px';
-  
-    if (posDKleft == posARROWleft && posDKtop == posARROWtop) {
-      location.reload(); 
+function deplacementArrow() {
+   var posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
+   var posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
+   var posARROWtop = parseInt(250);
+   var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
+   var marginLeftFond = 475;
+   var afin = false;
+   
+   //for(var p = 775; p>475; p=p-50){
+    while (posARROWleft > 525){
+    
+         document.getElementById("arrow").style.zIndex = 4;
+
+         posARROWleft = posARROWleft - 50;
+         document.getElementById("arrow").style.marginLeft = posARROWleft + "px";
+         return new Promise((resolve) => setTimeout(resolve, 1000)); // attendre 2 secondes avant de continuer
     }
+ 
+   document.getElementById('arrow').style.zIndex = 0;
+   document.getElementById('arrow').style.marginLeft = '775px';
+
 }
+
+function Dead(posDKleft, posARROWleft, posDKtop, posARROWtop){
+    if (posDKleft == posARROWleft && posDKtop == posARROWtop) {
+        location.reload(); 
+      }   
+};
