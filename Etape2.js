@@ -13,11 +13,11 @@ async function run() {
         console.log(e.keyCode);
         console.log(e.keyCode);
         
+        let depArrow = await deplacementArrow();
         
         
         //action de l'utilisateur
         if (e.keyCode == '38') {
-            let depArrow = await deplacementArrow();
             // up arrow(clavier)
             let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
             let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
@@ -55,7 +55,6 @@ async function run() {
             }
         }
         else if (e.keyCode == '40') {
-            let depArrow = await deplacementArrow();
             // down arrow(clavier)
             let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
             let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
@@ -94,7 +93,7 @@ async function run() {
             }
         }
         else if (e.keyCode == '37') {
-            let depArrow = await deplacementArrow();
+
             // left arrow(clavier)
             let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
             let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
@@ -133,7 +132,7 @@ async function run() {
         }
 
         else if (e.keyCode == '39') {
-            let depArrow = await deplacementArrow();
+            
             // right arrow(clavier)
             let posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
             let posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
@@ -202,23 +201,27 @@ async function run() {
     })
 
 }; 
-async function deplacementArrow() {
-    var posDKtop = await parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
-    var posDKleft = await parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
+ function deplacementArrow() {
+    var posDKtop = parseInt(document.getElementById('dk').style.marginTop.replace('px', ''), 10);
+    var posDKleft = parseInt(document.getElementById('dk').style.marginLeft.replace('px', ''), 10);
     var posARROWtop = 250;
     var posARROWleft = parseInt(document.getElementById('arrow').style.marginLeft.replace('px', ''), 10);
     var marginLeftFond = 475;
-    var fin = false;
+    var afin = false;
     
-    for(var p = 775; p>475; p=p-50){
-        document.getElementById('arrow').style.zIndex = 4;
-        
-            posARROWleft = posARROWleft - 50;
-            document.getElementById('arrow').style.marginLeft = posARROWleft + "px";
-            return new Promise(resolve => setTimeout(resolve, 2000)); // attendre 2 secondes avant de continuer
-        //if(posARROWleft == 475){ fin = true; } else { fin = false;}
-        
-    }
+    //for(var p = 775; p>475; p=p-50){
+        do {
+          document.getElementById("arrow").style.zIndex = 4;
+
+          posARROWleft = posARROWleft - 50;
+          document.getElementById("arrow").style.marginLeft = posARROWleft + "px";
+          return new Promise((resolve) => setTimeout(resolve, 2000)); // attendre 2 secondes avant de continuer
+          if (posARROWleft == 475) {
+            afin = true;
+          } else {
+            afin = false;
+          }
+        } while (afin == true);
   
     document.getElementById('arrow').style.zIndex = 0;
     document.getElementById('arrow').style.marginLeft = '775px';
