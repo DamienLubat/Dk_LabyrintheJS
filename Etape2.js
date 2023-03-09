@@ -194,7 +194,7 @@ async function run() {
                         let sonFinDK = sonFin.innerHTML;
                         
                         document.getElementById('finAffichage').style.display = "";
-                        document.getElementById('finAffichage').style.zIndex = 4;
+                        document.getElementById('finAffichage').style.zIndex = 5;
 
                         Dead(posDKleft, posARROWleft, posDKtop, posARROWtop)
                         fin = document.getElementsByClassName('stage1')[0];
